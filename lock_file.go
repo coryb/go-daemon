@@ -83,7 +83,6 @@ func (file *LockFile) WritePid() (err error) {
 	if err = file.Truncate(int64(fileLen)); err != nil {
 		return
 	}
-	err = file.Sync()
 	return
 }
 
